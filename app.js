@@ -73,7 +73,7 @@ function sortearAmigo() {
 }
 
 function reiniciarSorteo(){
-    amigos[];
+    amigos = [];
 
     document.getElementById("listaAmigos").innerHTML = "";
 
