@@ -67,5 +67,18 @@ function sortearAmigo() {
     resultado.innerHTML = "";
 
     amigos =[];
+    document.getElementById("listaAmigos").innerHTML = "";
+
     document.getElementById("resultado").innerText = `El amigo secreto es: ${amigoSorteado}`;
+}
+
+function reiniciarSorteo(){
+    amigos[];
+
+    document.getElementById("listaAmigos").innerHTML = "";
+
+    document.getElementById("resultado").innerHTML = "";
+
+    let input = document.getElementById("amigo");
+    input.value = "";
 }
