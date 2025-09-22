@@ -30,5 +30,42 @@ function agregarAmigo() {
         input.value = "";
         return;
     }
-    
+
+    amigos.push(nombre);
+
+    mostrarAmigos();
+
+    input.value = "";
+}
+
+function mostrarAmigos(indiceActual = 0) {
+    let lista = document.getElementById("listaAmigos");
+
+    if (indiceActual === 0) {
+        lista.innerHTML = "";
+    }
+
+    if (indiceActual>=amigos.length) {
+        return;
+    }
+
+    lista.innerHTML += `<li>${amigos[indiceActual]}</li>`;
+
+    mostrarAmigos(indiceActual + 1);
+}
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear");
+        return;
+    }
+
+    let indice = Math.floor(Math.random()*amigos.length);
+    let amigoSorteado = amigos[indice];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+
+    amigos =[];
+    document.getElementById("resultado").innerText = `El amigo secreto es: ${amigoSorteado}`;
 }
