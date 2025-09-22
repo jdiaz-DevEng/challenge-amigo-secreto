@@ -176,6 +176,6 @@ ul {
     margin-right: 40px;
 }
 
-.button-rest:hover {
+.button-reset:hover {
     background-color: var(--color-button-hover);
 }
